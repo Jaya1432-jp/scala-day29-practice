@@ -1,0 +1,111 @@
+[info] welcome to sbt 1.10.11 (Ubuntu Java 17.0.20.1)
+[info] loading project definition from /home/jayaprakash/scala-day29/project
+[info] loading settings for project root from build.sbt...
+[info] set current project to Scala-Spark-Day29-ECommerce-Pipeline (in build file:/home/jayaprakash/scala-day29/)
+[info] running (fork) Day29 
+[error] Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+[error] 26/10/12 05:33:56 WARN Utils: Your hostname, RAVI resolves to a loopback address: 127.0.1.1; using 10.255.255.254 instead (on interface lo)
+[error] 26/10/12 05:33:56 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[error] 26/10/12 05:33:56 INFO SparkContext: Running Spark version 3.5.6
+[error] 26/10/12 05:33:56 INFO SparkContext: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/10/12 05:33:56 INFO SparkContext: Java version 17.0.20.1
+[error] 26/10/12 05:33:56 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[error] 26/10/12 05:33:56 INFO ResourceUtils: ==============================================================
+[error] 26/10/12 05:33:56 INFO ResourceUtils: No custom resources configured for spark.driver.
+[error] 26/10/12 05:33:56 INFO ResourceUtils: ==============================================================
+[error] 26/10/12 05:33:56 INFO SparkContext: Submitted application: Day29-EndToEndECommerce
+[error] 26/10/12 05:33:56 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[error] 26/10/12 05:33:56 INFO ResourceProfile: Limiting resource is cpu
+[error] 26/10/12 05:33:56 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[error] 26/10/12 05:33:56 INFO SecurityManager: Changing view acls to: jayaprakash
+[error] 26/10/12 05:33:56 INFO SecurityManager: Changing modify acls to: jayaprakash
+[error] 26/10/12 05:33:56 INFO SecurityManager: Changing view acls groups to: 
+[error] 26/10/12 05:33:56 INFO SecurityManager: Changing modify acls groups to: 
+[error] 26/10/12 05:33:56 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: jayaprakash; groups with view permissions: EMPTY; users with modify permissions: jayaprakash; groups with modify permissions: EMPTY
+[error] 26/10/12 05:33:57 INFO Utils: Successfully started service 'sparkDriver' on port 39975.
+[error] 26/10/12 05:33:57 INFO SparkEnv: Registering MapOutputTracker
+[error] 26/10/12 05:33:57 INFO SparkEnv: Registering BlockManagerMaster
+[error] 26/10/12 05:33:57 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[error] 26/10/12 05:33:57 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[error] 26/10/12 05:33:57 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[error] 26/10/12 05:33:57 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-1c27bd67-9b37-4be9-82d1-fc4bf32af603
+[error] 26/10/12 05:33:57 INFO MemoryStore: MemoryStore started with capacity 994.8 MiB
+[error] 26/10/12 05:33:57 INFO SparkEnv: Registering OutputCommitCoordinator
+[error] 26/10/12 05:33:57 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+[error] 26/10/12 05:33:58 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[error] 26/10/12 05:33:58 INFO Executor: Starting executor ID driver on host 10.255.255.254
+[error] 26/10/12 05:33:58 INFO Executor: OS info Linux, 6.18.33.2-microsoft-standard-WSL2, amd64
+[error] 26/10/12 05:33:58 INFO Executor: Java version 17.0.20.1
+[error] 26/10/12 05:33:58 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[error] 26/10/12 05:33:58 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@434514d8 for default.
+[error] 26/10/12 05:33:58 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 36135.
+[error] 26/10/12 05:33:58 INFO NettyBlockTransferService: Server created on 10.255.255.254:36135
+[error] 26/10/12 05:33:58 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[error] 26/10/12 05:33:58 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.255.255.254, 36135, None)
+[error] 26/10/12 05:33:58 INFO BlockManagerMasterEndpoint: Registering block manager 10.255.255.254:36135 with 994.8 MiB RAM, BlockManagerId(driver, 10.255.255.254, 36135, None)
+[error] 26/10/12 05:33:58 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.255.255.254, 36135, None)
+[error] 26/10/12 05:33:58 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.255.255.254, 36135, None)
+[info] ===== 1. READ RAW DATA =====
+[info] Raw order count: 12
+[info] ===== 2. CLEAN ORDERS =====
+[info] Clean order count: 11
+[info] Rejected order count: 1
+[info] ===== 3. PAIR RDD REVENUE BY PRODUCT =====
+[info] P001: Rs. 200000.00
+[info] P002: Rs. 12000.00
+[info] P003: Rs. 21000.00
+[info] P004: Rs. 4500.00
+[info] ===== 4. ENRICH ORDERS =====
+[info] Enriched order count: 10
+[info] +--------+-------------+------------+--------+-------+----------+
+[info] |order_id|customer_name|product_name|quantity|revenue|order_date|
+[info] +--------+-------------+------------+--------+-------+----------+
+[info] |O001    |Jaya         |Laptop      |2       |100000 |2026-10-01|
+[info] |O002    |Ravi         |Headphones  |1       |2000   |2026-10-01|
+[info] |O003    |Jaya         |Shoes       |3       |9000   |2026-10-02|
+[info] |O004    |Meena        |Laptop      |1       |50000  |2026-10-02|
+[info] |O005    |Arjun        |Backpack    |2       |3000   |2026-10-03|
+[info] |O006    |Ravi         |Shoes       |2       |6000   |2026-10-03|
+[info] |O007    |Priya        |Headphones  |4       |8000   |2026-10-04|
+[info] |O008    |Meena        |Backpack    |1       |1500   |2026-10-04|
+[info] |O009    |Jaya         |Laptop      |1       |50000  |2026-10-05|
+[info] |O010    |Priya        |Shoes       |2       |6000   |2026-10-05|
+[info] +--------+-------------+------------+--------+-------+----------+
+[info] ===== 5. REVENUE BY CATEGORY =====
+[info] +-----------+-------------+-----------+
+[info] |category   |total_revenue|order_count|
+[info] +-----------+-------------+-----------+
+[info] |Electronics|210000       |5          |
+[info] |Fashion    |21000        |3          |
+[info] |Accessories|4500         |2          |
+[info] +-----------+-------------+-----------+
+[info] ===== 6. CUSTOMER ORDER WINDOW =====
+[info] +-----------+-------------+--------+----------+----------+
+[info] |customer_id|customer_name|order_id|order_date|order_rank|
+[info] +-----------+-------------+--------+----------+----------+
+[info] |C001       |Jaya         |O009    |2026-10-05|1         |
+[info] |C001       |Jaya         |O003    |2026-10-02|2         |
+[info] |C001       |Jaya         |O001    |2026-10-01|3         |
+[info] |C002       |Ravi         |O006    |2026-10-03|1         |
+[info] |C002       |Ravi         |O002    |2026-10-01|2         |
+[info] |C003       |Meena        |O008    |2026-10-04|1         |
+[info] |C003       |Meena        |O004    |2026-10-02|2         |
+[info] |C004       |Arjun        |O005    |2026-10-03|1         |
+[info] |C005       |Priya        |O010    |2026-10-05|1         |
+[info] |C005       |Priya        |O007    |2026-10-04|2         |
+[info] +-----------+-------------+--------+----------+----------+
+[info] ===== 7. DAILY REVENUE =====
+[info] +----------+-------------+
+[info] |order_date|daily_revenue|
+[info] +----------+-------------+
+[info] |2026-10-01|102000       |
+[info] |2026-10-02|59000        |
+[info] |2026-10-03|9000         |
+[info] |2026-10-04|9500         |
+[info] |2026-10-05|56000        |
+[info] +----------+-------------+
+[info] ===== 8. WRITE PARTITIONED PARQUET =====
+[info] Parquet output saved to output//orders_parquet
+[info] Rejected-record accumulator: 1
+[info] DAY 29 PIPELINE COMPLETED SUCCESSFULLY
+[success] Total time: 19 s, completed Oct 12, 2026, 5:34:11 AM
